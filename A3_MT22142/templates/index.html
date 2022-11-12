@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/staticFiles/main.css' />
+  </head>
+  <style>
+    input[type=text], select {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 30%;
+      background-color: green;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    
+    div {
+      height: 200px;
+      width: 30%;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    h1 {
+  text-align: left;
+}
+h3 {
+  text-align: left;
+}
+form{
+  text-align: left;
+}
+
+.head{
+
+  text-align: left;
+}
+    </style>
+  <body>
+    <h1 text-align: center; >Claculate HIGH and LOW of Stock</h1>
+    <h4 text-align: center; >NOTE:- Enter End date greater than start date </h4>
+    
+
+   <div class="center">
+    <form action="/show_data" method="POST">
+      <label for="stocks">Stock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <select id="stocks" name="stocks">
+          <option value="" disabled selected hidden style="color:#999;">select stocks</option>
+          <option value="GAIL">GAIL</option>
+          <option value="GRASIM">GRASIM</option>
+          <option value="HCLTECH">HCLTECH</option>
+          <option value="HDFC">HDFC</option>
+          <option value="HDFCBANK">HDFCBANK</option>
+          <option value="HEROMOTOCO">HEROMOTOCO</option>
+          <option value="HINDALCO">HINDALCO</option>
+          <option value="ICICIBANK">ICICIBANK</option>
+          <option value="INDUSINDBK">INDUSINDBK</option>
+          <option value="INFRATEL">INFRATEL</option>
+          <option value="INFY">INFY</option>
+          <option value="IOC">IOC</option>
+          <option value="ITC">ITC</option>
+          <option value="JSWSTEEL">JSWSTEEL</option>
+          <option value="KOTAKBANK">KOTAKBANK</option>
+          <option value="LT">LT</option>
+          <option value="MARUTI">MARUTI</option>
+          <option value="MM">MM</option>
+          <option value="NESTLEIND">NESTLEIND</option>
+          <option value="NIFTY50_all">NIFTY50_all</option>
+          <option value="NTPC">NTPC</option>
+          <option value="ONGC">ONGC</option>
+          <option value="POWERGRID">POWERGRID</option>
+          <option value="HINDUNILVR">HINDUNILVR</option>
+          <option value="RELIANCE">RELIANCE</option>
+          <option value="stock_metadata">stock_metadata</option>
+          <option value="SUNPHARMA">SUNPHARMA</option>
+          <option value="TATAMOTORS">TATAMOTORS</option>
+          <option value="TATASTEEL">TATASTEEL</option>
+          <option value="TCS">TCS</option>
+          <option value="TECHM">TECHM</option>
+          <option value="TITAN">TITAN</option>
+          <option value="ULTRACEMCO">ULTRACEMCO</option>
+          <option value="UPL">UPL</option>
+          <option value="VEDL">VEDL</option>
+          <option value="WIPRO">WIPRO</option>
+          <option value="ZEEL">ZEEL</option>
+          <option value="SBIN">SBIN</option>
+          <option value="secondary_data">secondary_data</option>
+          <option value="SHREECEM">SHREECEM</option>
+          <option value="ADANIPORTS">ADANIPORTS</option>
+          <option value="ASIANPAINT">ASIANPAINT</option>
+          <option value="AXISBANK">AXISBANK</option>
+          <option value="BAJAJ-AUTO">BAJAJ-AUTO</option>
+          <option value="BAJAJFINSV">BAJAJFINSV</option>
+          <option value="BAJFINANCE">BAJFINANCE</option>
+          <option value="BHARTIARTL">BHARTIARTL</option>
+          <option value="BPCL">BPCL</option>
+          <option value="BRITANNIA">BRITANNIA</option>
+          <option value="CIPLA">CIPLA</option>
+          <option value="COALINDIA">COALINDIA</option>
+          <option value="DRREDDY">DRREDDY</option>
+          <option value="EICHERMOT">EICHERMOT</option>
+        </select>
+        <br>
+        <br>
+
+      <label for="startDate">Start Date &nbsp;</label>
+          <input type="text" id="startDate" name="startDate" placeholder="DD/MM/YYYY">
+          <br>
+        <br>
+
+      <label for="endDate">End date &nbsp;</label>
+          <input type="text" id="endDate" name="endDate" placeholder="DD/MM/YYYY">
+        <br>
+        <br>
+     
+      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">
+<h5>{{error}}</h5>
+
+<h4 class="head">HIGH of the stock is : {{high}}</h4>
+<h4 class="head">LOW of the stock is : {{low}}</h4>
+      </form>
+    </div>   
+   
+  </body>
+</html>
